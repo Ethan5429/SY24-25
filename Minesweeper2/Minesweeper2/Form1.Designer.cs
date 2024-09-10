@@ -1139,7 +1139,7 @@
             this.MinePictureBox.Image = global::Minesweeper2.Properties.Resources.minesweeperMine;
             this.MinePictureBox.Location = new System.Drawing.Point(510, 94);
             this.MinePictureBox.Name = "MinePictureBox";
-            this.MinePictureBox.Size = new System.Drawing.Size(100, 50);
+            this.MinePictureBox.Size = new System.Drawing.Size(59, 50);
             this.MinePictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.MinePictureBox.TabIndex = 101;
             this.MinePictureBox.TabStop = false;
