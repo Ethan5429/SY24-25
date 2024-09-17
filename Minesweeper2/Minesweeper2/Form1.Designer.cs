@@ -130,6 +130,7 @@
             this.button100 = new System.Windows.Forms.Button();
             this.MinePictureBox = new System.Windows.Forms.PictureBox();
             this.FlagPictureBox = new System.Windows.Forms.PictureBox();
+            this.ResetButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.MinePictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.FlagPictureBox)).BeginInit();
             this.SuspendLayout();
@@ -1154,11 +1155,22 @@
             this.FlagPictureBox.TabIndex = 100;
             this.FlagPictureBox.TabStop = false;
             // 
+            // ResetButton
+            // 
+            this.ResetButton.Location = new System.Drawing.Point(531, 181);
+            this.ResetButton.Name = "ResetButton";
+            this.ResetButton.Size = new System.Drawing.Size(75, 23);
+            this.ResetButton.TabIndex = 102;
+            this.ResetButton.Text = "Reset";
+            this.ResetButton.UseVisualStyleBackColor = true;
+            this.ResetButton.Click += new System.EventHandler(this.ResetButton_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 489);
+            this.Controls.Add(this.ResetButton);
             this.Controls.Add(this.MinePictureBox);
             this.Controls.Add(this.FlagPictureBox);
             this.Controls.Add(this.button100);
@@ -1373,6 +1385,7 @@
         private System.Windows.Forms.Button button100;
         private System.Windows.Forms.PictureBox FlagPictureBox;
         private System.Windows.Forms.PictureBox MinePictureBox;
+        private System.Windows.Forms.Button ResetButton;
     }
 }
 
