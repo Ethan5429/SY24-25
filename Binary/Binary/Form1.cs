@@ -267,18 +267,23 @@ namespace Binary
 
         private void Addbutton_Click(object sender, EventArgs e)
         {
-            for (int i = 0; i < bits.Length; i++)
+            for (int i = 0; i < bits3.Length; i++)
             {
-                if (bits[i] == 1 && bits2[i] == 1)
-                {
-                    if (i == 0) { bits3[i] = 0; }
-                    else { bits3[i - 1] = 1; }
+                bits3[i] = 0;
+                update();
+            }
+
+            int total = 0;
+            for (int i = 7; i > -1; i--)
+            {
+                total = (bits[i] + bits2[i] + bits3[i]);
+                if (total > 1 && i > 0)
+                { 
+                    bits3[i - 1] = 1;
+                    total = total - 2;
+                    bits3[i] = total;
                 }
-                else if (bits[i] == 1 || bits2[i] == 1)
-                {
-                    bits3[i] = 1;
-                }
-                else { bits3[i] = 0; }
+                else { bits3[i] = total; total = 0; } 
                 update();
             }
         }
