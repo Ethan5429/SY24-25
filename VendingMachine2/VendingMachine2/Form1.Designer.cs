@@ -77,6 +77,7 @@
             this.SpriteButton = new System.Windows.Forms.Button();
             this.FantaButton = new System.Windows.Forms.Button();
             this.buttonReturn = new System.Windows.Forms.Button();
+            this.buyButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).BeginInit();
@@ -563,11 +564,22 @@
             this.buttonReturn.UseVisualStyleBackColor = true;
             this.buttonReturn.Click += new System.EventHandler(this.buttonReturn_Click);
             // 
+            // buyButton
+            // 
+            this.buyButton.Location = new System.Drawing.Point(531, 381);
+            this.buyButton.Name = "buyButton";
+            this.buyButton.Size = new System.Drawing.Size(75, 23);
+            this.buyButton.TabIndex = 50;
+            this.buyButton.Text = "buy";
+            this.buyButton.UseVisualStyleBackColor = true;
+            this.buyButton.Click += new System.EventHandler(this.buyButton_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 432);
+            this.Controls.Add(this.buyButton);
             this.Controls.Add(this.buttonReturn);
             this.Controls.Add(this.FantaButton);
             this.Controls.Add(this.SpriteButton);
@@ -690,6 +702,7 @@
         private System.Windows.Forms.Button SpriteButton;
         private System.Windows.Forms.Button FantaButton;
         private System.Windows.Forms.Button buttonReturn;
+        private System.Windows.Forms.Button buyButton;
     }
 }
 

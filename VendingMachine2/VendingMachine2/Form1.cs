@@ -86,21 +86,25 @@ namespace VendingMachine2
             coinSlot.InsertCoin("dollar");
             UpdateTotalLabel();
         }
-
-        private void UpdateTotalLabel()
-        {
-            labelTotal.Text = coinSlot.Total().ToString("C2");
-        }
-
         private void buttonReturn_Click(object sender, EventArgs e)
         {
             coinSlot.CoinReturn();
             UpdateTotalLabel();
         }
 
+        private void UpdateTotalLabel()
+        {
+            labelTotal.Text = coinSlot.Total().ToString("C2");
+        }
+
         private void Form1_Load(object sender, EventArgs e)
         {
             products.AddProduct();
+        }
+
+        private void buyButton_Click(object sender, EventArgs e)
+        {
+            products.Buy(labelProductName.Text, labelProductPrice.Text);
         }
     }
 }
