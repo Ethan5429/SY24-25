@@ -13,7 +13,7 @@ namespace VendingMachine2
     public partial class Form1 : Form
     {
         private CoinSlot coinSlot;
-        private Products products = new Products;
+        private Products products = new Products();
 
         public Form1()
         {
@@ -99,13 +99,25 @@ namespace VendingMachine2
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            //products.AddProduct();
+            products.AddProduct("Snickers", 10);
+            products.AddProduct("Pepsi", 10);
+            products.AddProduct("Lays", 10);
+            products.AddProduct("Doritos", 10);
+            products.AddProduct("Pretzels", 10);
+            products.AddProduct("Pringles", 10);
+            products.AddProduct("Cheetos", 10);
+            products.AddProduct("Cheez-It", 10);
+            products.AddProduct("Coca-Cola", 10);
+            products.AddProduct("Twix", 10);
+            products.AddProduct("Sprite", 10);
+            products.AddProduct("Fanta", 10);
         }
 
         private void buyButton_Click(object sender, EventArgs e)
         {
             decimal price = decimal.Parse(labelProductPrice.Text.Substring(1));
             products.Buy(labelProductName.Text, price);
+            
         }
     }
 }
