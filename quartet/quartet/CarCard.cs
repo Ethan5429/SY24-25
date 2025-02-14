@@ -8,6 +8,7 @@ namespace quartet
 {
     internal class CarCard
     {
+<<<<<<< HEAD
         public enum category { maxspeed, CC, zeroTo60, cylinders, HP, RPM, ID}
         public string name { get; set; }
         public int maxspeed { get; set; }
@@ -80,5 +81,13 @@ namespace quartet
                 + "\n\tRPM:" + RPM
                 + "\n\tID:" + ID;
         }
+=======
+       public int maxspeed { get; set; }
+        public double zeroTO60 { get; set; }
+        public int HP { get; set; }
+        public int CC { get; set; }
+        public int cylinders { get; set; }
+        public int RPM { get; set; }
+>>>>>>> main
     }
 }
