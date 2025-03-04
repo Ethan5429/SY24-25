@@ -10,17 +10,15 @@ namespace quartet
     internal class Deck
     {
         List<CarCard> carCards;
-
         public Deck(List<CarCard> cards)
         {
             this.carCards = cards;
         }
-
-        public void shuffle()
+        public void Shuffle()
         {
             int n = 0;
-            CarCard temp = null;
             Random rnd = new Random();
+            CarCard temp = null;
             for (int i = 0; i < carCards.Count; i++)
             {
                 temp = carCards[i];
@@ -29,17 +27,24 @@ namespace quartet
                 carCards[n] = temp;
             }
         }
-
         public CarCard GetCard(int index)
         {
-            CarCard C = carCards[index];
-            carCards.RemoveAt(index);
-            return C;
+            if (carCards.Count > 0)
+            {
+                CarCard C = carCards[index];
+                carCards.RemoveAt(index);
+                return C;
+            }
+            return null;
         }
 
+        public bool IsEmpty()
+        {
+            return carCards.Count == 0;
+        }
         public override string ToString()
         {
-            string retVal = "Deck: \n";
+            string retVal = "Deck:\n";
             foreach (CarCard card in carCards)
             {
                 retVal += card.ToString();
